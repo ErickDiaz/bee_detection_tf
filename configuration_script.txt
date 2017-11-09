@@ -1,0 +1,13 @@
+# No GPU
+conda create -n bee_tf python=3 pillow lxml jupyter matplotlib protobuf 
+pip install tensorflow
+
+#GPU
+conda create -n bee_tf python=3 pillow lxml jupyter matplotlib protobuf 
+
+
+
+# Protobuf compilation
+protoc object_detection/protos/*.proto --python_out=.
+
+#export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
